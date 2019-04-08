@@ -1,0 +1,14 @@
+<head>
+    <title> DaEun's First Blog </title>
+</head>
+<body>
+    <h1>DaEun</h1>
+    <a href="{% url 'new'%}" class="top-menu">글쓰기</a>
+    {% for post in posts.all %}
+        <div class="container">
+            <h2><a href="/blog/post/{{post.id}}/">{{post.title}}</a></h2>
+            <p>{{post.created_date}}</p>
+        </div>
+    {% endfor %}
+
+</body>
